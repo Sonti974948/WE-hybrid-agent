@@ -1,0 +1,7 @@
+# WE-Hybrid MCP Server — dependencies
+# pip install -r requirements.txt
+
+mcp>=1.0.0          # Model Context Protocol Python SDK
+pydantic>=2.0.0     # Config validation
+requests>=2.28.0    # PDB download from RCSB
+paramiko>=3.0.0     # SSH/SFTP for remote cluster execution
