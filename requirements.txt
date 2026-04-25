@@ -1,0 +1,25 @@
+# WE-Hybrid Terminal Agent — Python dependencies
+# Install: pip install -r requirements.txt --break-system-packages
+#      or: pip install -r requirements.txt --user
+
+# ── LangGraph (agent framework) ───────────────────────────────────────────────
+langgraph>=0.2.0
+langchain-core>=0.2.0
+
+# ── HuggingFace LLM backend (replaces Ollama) ─────────────────────────────────
+# Runs Llama / Qwen locally on GPU — no API key, no external server
+langchain-huggingface>=0.1.0
+transformers>=4.40.0
+accelerate>=0.30.0
+bitsandbytes>=0.43.0        # 4-bit / 8-bit quantization (needs CUDA)
+
+# ── Terminal UI ───────────────────────────────────────────────────────────────
+rich>=13.0.0
+
+# ── Config validation ─────────────────────────────────────────────────────────
+pydantic>=2.0.0
+
+# ── RAG — local documentation retrieval (strongly recommended) ────────────────
+# Run build_index.py once on EXPANSE login node after installing these
+sentence-transformers>=2.6.0   # local embeddings, ~90MB model download
+chromadb>=0.5.0                # persistent local vector store
