@@ -181,9 +181,9 @@ The assistant will call tools in this order:
 
 ```
 1. connect_to_cluster(host="expanse", use_control_master=true,
-                      setup_cmd="module purge; module load gpu/0.15.4
-                                 amber/22 anaconda3/2021.05;
-                                 conda activate westpa2")
+                      setup_cmd="module purge; module load openmpi/4.0.4 gpu/0.15.4
+                                 amber/20;
+                                 conda activate westpa-2.0")
 
 2. get_server_mode()
    → confirms tleap ✓, squeue ✓, pmemd.cuda ✓ on EXPANSE
